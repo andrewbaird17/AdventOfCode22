@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AdventOfCode22.Day1;
+using System;
 
 namespace AdventOfCode22
 {
@@ -6,7 +7,10 @@ namespace AdventOfCode22
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var day1 = new Day1.Day1();
+            day1.RunDay1();
+
+            Console.ReadLine();
         }
     }
 }
