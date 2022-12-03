@@ -15,9 +15,33 @@ namespace AdventOfCode22.Day3
             var sacks = text.Split("\r\n");
             var priorityTotal = 0;
 
-            priorityTotal = Part1(sacks);
+            //priorityTotal = Part1(sacks);
+            priorityTotal = Part2(sacks);
 
             Console.Write(priorityTotal);
+        }
+
+        public int Part2(string[] sacks)
+        {
+            var priorityTotal = 0;
+            List<char> elf1 = new List<char>();
+            List<char> elf2 = new List<char>();
+            List<char> elf3 = new List<char>();
+
+            for (int i = 0; i < sacks.Length; i += 3)
+            {
+                elf1 = sacks[i].ToCharArray().ToList();
+                elf2 = sacks[i + 1].ToCharArray().ToList();
+                elf3 = sacks[i + 2].ToCharArray().ToList();
+
+                var duplicates = elf1.Intersect(elf2).Intersect(elf3).ToList();
+                foreach (var letter in duplicates)
+                {
+                    priorityTotal += GetPriorization(letter);
+                }
+            }
+
+            return priorityTotal;
         }
 
         public int Part1(string[] sacks)
