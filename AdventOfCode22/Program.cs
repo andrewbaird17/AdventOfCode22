@@ -1,5 +1,5 @@
-﻿using AdventOfCode22.Day1;
-using System;
+﻿using System;
+
 
 namespace AdventOfCode22
 {
@@ -10,8 +10,8 @@ namespace AdventOfCode22
             //var day1 = new Day1.Day1();
             //day1.RunDay1();
 
-            var day2 = new Day2.Day2();
-            day2.RunDay2();
+            var day3 = new Day3.Day3();
+            day3.RunDay3();
 
             Console.ReadLine();
         }
